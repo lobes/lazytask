@@ -9,11 +9,12 @@ before making a change.
 ## Codebase guide
 
 [This doc](./docs/dev/Codebase_Guide.md) explains:
-* what the different packages in the codebase are for
-* where important files live
-* important concepts in the code
-* how the event loop works
-* other useful information
+
+- what the different packages in the codebase are for
+- where important files live
+- important concepts in the code
+- how the event loop works
+- other useful information
 
 ## All code changes happen through Pull Requests
 
@@ -37,8 +38,9 @@ If you want to spare yourself the hassle of setting up your dev environment your
 ![image](https://user-images.githubusercontent.com/8456633/201500508-0d55f99f-5035-4a6f-a0f8-eaea5c003e5d.png)
 
 This requires that:
-* you have docker installed
-* you have the dev containers extension installed in VSCode
+
+- you have docker installed
+- you have the dev containers extension installed in VSCode
 
 See [here](https://code.visualstudio.com/docs/devcontainers/containers) for more info about dev containers.
 
@@ -103,7 +105,6 @@ Boy that's a hard word to spell. Anyway, `lazytask` is translated into several l
 TODO: make that last statement true
 
 Note, we use 'Sentence case' for everything (so no 'Title Case' or 'whatever-it's-called-when-there's-no-capital-letters-case')
-
 
 ## Debugging
 
@@ -184,7 +185,7 @@ Sometimes you will need to make a change in the gocui fork (https://github.com/j
 ./scripts/bump_gocui.sh
 ```
 
-5. Raise a PR in lasytask with those changes
+1. Raise a PR in lasytask with those changes
 
 ## Updating Lazycore
 
@@ -201,7 +202,7 @@ Sometimes you will need to make a change in the gocui fork (https://github.com/j
 
 Or if you're using VSCode, there is a bump lazycore task you can find by going `cmd+shift+p` and typing 'Run task'
 
-5. Raise a PR in lasytask with those changes
+1. Raise a PR in lasytask with those changes
 
 ## Improvements
 
