@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/BurntSushi/toml"
+	"github.com/google/uuid"
 )
 
 type Uuid string
@@ -29,7 +30,6 @@ const (
 	Done  Status = "made the thing do the thing"
 )
 
-// Task represents a task
 type Task struct {
 	Uuid        Uuid
 	Description string
@@ -40,12 +40,39 @@ type Task struct {
 	Parents     []Uuid
 }
 
-func readTask() {
+func (t Task) Error() string {
+	return fmt.Sprintf(`
+    "Task Error: [%s] %s 
+    Priority: %s
+    Status: %s`, t.Uuid, t.Description, t.Priority, t.Status)
+
+}
+
+func ReadTask() {
 	var testicles Task
 	if _, err := toml.DecodeFile("sisiphus/tasks/template.toml", &testicles); err != nil {
 		fmt.Printf("Error decoding task from toml: %s\n", err)
 	}
 	fmt.Printf("description: %s\n", testicles.Description)
+}
+
+func (t *Task) SetStatus(newStatus Status) error {
+	// Here, you could enforce rules. For example:
+	// - Disallow moving away from StatusDone
+	// - Define valid transitions if needed
+	if t.Status == Done && newStatus != Done {
+		return fmt.Errorf("invalid transition from %s to %s", Done, newStatus)
+	}
+	t.Status = newStatus
+	return nil
+}
+
+func (t Task) CreateTask(data Task) error {
+	newUuid := uuid.New()
+	return Task{
+		Uuid:        newUuid,
+		Description: data.Description,
+	}
 }
 
 // func createTask()
