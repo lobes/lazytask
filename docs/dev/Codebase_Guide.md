@@ -70,6 +70,20 @@
 - `vendor/github.com/jesseduffield/gocui/view.go`: defines the gocui view struct
 
 ## Concepts
+### task state-machine
+```mermaid
+stateDiagram-v2 
+  state new <<fork>>
+    [*] --> new: newtask 
+    new --> State2 
+    new --> State3 
+    
+    state join_state <<join>> 
+    State2 --> join_state 
+    State3 --> join_state 
+    join_state --> State4 
+    State4 --> [*]
+```
 
 - **View**: Views are defined in the gocui package, and they maintain an internal buffer of content which is rendered each time the screen is drawn.
 - **Context**: A context is tied to a view and contains some additional state and logic specific to that view e.g. the branches context has code relating specifically to branches, and writes the list of branches to the branches view. Views and contexts share some responsibilities for historical reasons.
