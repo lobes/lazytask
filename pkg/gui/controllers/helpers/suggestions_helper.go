@@ -6,11 +6,11 @@ import (
 	"strings"
 
 	"github.com/jesseduffield/gocui"
+	"github.com/jesseduffield/minimal/gitignore"
 	"github.com/lobes/lazytask/pkg/commands/models"
 	"github.com/lobes/lazytask/pkg/gui/presentation"
 	"github.com/lobes/lazytask/pkg/gui/types"
 	"github.com/lobes/lazytask/pkg/utils"
-	"github.com/jesseduffield/minimal/gitignore"
 	"github.com/samber/lo"
 	"golang.org/x/exp/slices"
 	"gopkg.in/ozeidan/fuzzy-patricia.v3/patricia"

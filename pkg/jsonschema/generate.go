@@ -9,8 +9,8 @@ import (
 	"reflect"
 
 	"github.com/jesseduffield/lazycore/pkg/utils"
-	"github.com/lobes/lazytask/pkg/config"
 	"github.com/karimkhaleel/jsonschema"
+	"github.com/lobes/lazytask/pkg/config"
 )
 
 func GetSchemaDir() string {
