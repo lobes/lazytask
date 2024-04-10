@@ -243,7 +243,7 @@ func RussianTranslationSet() TranslationSet {
 		PasteCommits:                     "Вставить отобранные коммиты (cherry-pick)",
 		SureCherryPick:                   "Вы уверены, что хотите выборочно применить (cherry-picked) отобранные коммиты в эту ветку?",
 		CherryPick:                       "Выборочная отборка (Cherry-Pick)",
-		Donate:                           "Пожертвовать",
+		GitHub:                           "Пожертвовать",
 		AskQuestion:                      "Задать вопрос",
 		PrevLine:                         "Выбрать предыдущую строку",
 		NextLine:                         "Выбрать следующую строку",

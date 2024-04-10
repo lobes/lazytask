@@ -273,7 +273,7 @@ func traditionalChineseTranslationSet() TranslationSet {
 		PasteCommits:                     "貼上提交 (揀選)",
 		SureCherryPick:                   "是否將複製的提交揀選到此分支？",
 		CherryPick:                       "揀選 (Cherry-pick)",
-		Donate:                           "贊助",
+		GitHub:                           "贊助",
 		AskQuestion:                      "諮詢",
 		PrevLine:                         "選擇上一行",
 		NextLine:                         "選擇下一行",

@@ -204,7 +204,7 @@ func japaneseTranslationSet() TranslationSet {
 		PasteCommits:   "コミットを貼り付け (cherry-pick)",
 		// SureCherryPick:                      "Are you sure you want to cherry-pick the copied commits onto this branch?",
 		CherryPick:           "Cherry-Pick",
-		Donate:               "支援",
+		GitHub:               "支援",
 		AskQuestion:          "質問",
 		PrevLine:             "前の行を選択",
 		NextLine:             "次の行を選択",

@@ -299,7 +299,7 @@ func polishTranslationSet() TranslationSet {
 		CherryPick:                          "Cherry-pick",
 		CannotCherryPickNonCommit:           "Nie można cherry-pick tego rodzaju wpisu TODO",
 		CannotCherryPickMergeCommit:         "Cherry-pick commitów scalających nie jest obsługiwane",
-		Donate:                              "Wesprzyj",
+		GitHub:                              "Wesprzyj",
 		AskQuestion:                         "Zadaj pytanie",
 		PrevLine:                            "Wybierz poprzednią linię",
 		NextLine:                            "Wybierz następną linię",

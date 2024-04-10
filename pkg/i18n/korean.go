@@ -199,7 +199,7 @@ func koreanTranslationSet() TranslationSet {
 		PasteCommits:                     "커밋을 붙여넣기 (cherry-pick)",
 		SureCherryPick:                   "정말로 복사한 커밋을 이 브랜치에 체리픽하시겠습니까?",
 		CherryPick:                       "체리픽",
-		Donate:                           "후원",
+		GitHub:                           "후원",
 		AskQuestion:                      "질문하기",
 		PrevLine:                         "이전 줄 선택",
 		NextLine:                         "다음 줄 선택",

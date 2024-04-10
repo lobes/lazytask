@@ -29,11 +29,12 @@ lazytask
 
 ### Alias
 
-If you want, you can also add an alias for this with 
+If you want, you can also add an alias for this with
 
 ```sh
 echo "alias lt='lazytask'" >> ~/.zshrc` 
 ```
+
 (or whichever rc file you're using).
 
 TODO: test `profile.ps1`
@@ -76,7 +77,6 @@ Check out the [configuration docs](docs/Config.md).
 
 See the [docs](docs/Custom_Pagers.md)
 
-
 ## Contributing
 
 We love your input! Please check out the [contributing guide](CONTRIBUTING.md).
@@ -85,12 +85,10 @@ We love your input! Please check out the [contributing guide](CONTRIBUTING.md).
 
 Run `lazytask --debug` in one terminal tab and `lazytask --logs` in another to view the program and its log output side by side.
 
-
 ## FAQ
 
 ### What do the task colours represent?
 
-- **Green:** the task is done
-- **Yellow:** the task is in progress
-- **Red:** the task isn't started
-
+- __Green:__ the task is done
+- __Yellow:__ the task is in progress
+- __Red:__ the task isn't started

@@ -1275,7 +1275,7 @@ func EnglishTranslationSet() TranslationSet {
 		CherryPick:                           "Cherry-pick",
 		CannotCherryPickNonCommit:            "Cannot cherry-pick this kind of todo item",
 		CannotCherryPickMergeCommit:          "Cherry-picking merge commits is not supported",
-		Donate:                               "Donate",
+		GitHub:                               "GitHub",
 		AskQuestion:                          "Ask Question",
 		PrevLine:                             "Select previous line",
 		NextLine:                             "Select next line",

@@ -163,7 +163,7 @@ func dutchTranslationSet() TranslationSet {
 		PasteCommits:                    "Plak commits (cherry-pick)",
 		SureCherryPick:                  "Weet je zeker dat je de gekopieerde commits naar deze branch wil cherry-picken?",
 		CherryPick:                      "Cherry-Pick",
-		Donate:                          "Doneer",
+		GitHub:                          "GitHub",
 		PrevLine:                        "Selecteer de vorige lijn",
 		NextLine:                        "Selecteer de volgende lijn",
 		PrevHunk:                        "Selecteer de vorige hunk",
