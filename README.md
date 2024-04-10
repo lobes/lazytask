@@ -2,6 +2,8 @@
 
 A simple terminal UI for tasks
 
+*** Massive shoutout to [lazygit](https://github.com/jesseduffield/lazygit)
+
 ## Table of contents
 
 - [Table of contents](#table-of-contents)
