@@ -1,0 +1,7 @@
+uuid = 1                                    # todo: generate uuids on task creation
+# uuid = <generate-uuid>.go
+description = "make the thing do the thing"
+priority = "high"                           # todo: figure out enums
+status = "onnit"                            # todo: figure out enums
+due_date = 1777-07-17 07:07:07Z
+

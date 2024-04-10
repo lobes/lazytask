@@ -2,15 +2,15 @@
 
 Default path for the config file:
 
-- Linux: `~/.config/lazygit/config.yml`
-- MacOS: `~/Library/Application\ Support/lazygit/config.yml`
-- Windows: `%LOCALAPPDATA%\lazygit\config.yml` (default location, but it will also be found in `%APPDATA%\lazygit\config.yml`
+- Linux: `~/.config/lazytask/config.yml`
+- MacOS: `~/Library/Application\ Support/lazytask/config.yml`
+- Windows: `%LOCALAPPDATA%\lazytask\config.yml` (default location, but it will also be found in `%APPDATA%\lazytask\config.yml`
 
 For old installations (slightly embarrassing: I didn't realise at the time that you didn't need to supply a vendor name to the path so I just used my name):
 
 - Linux: `~/.config/lobes/lazytask/config.yml`
 - MacOS: `~/Library/Application\ Support/lobes/lazytask/config.yml`
-- Windows: `%APPDATA%\jesseduffield\lazygit\config.yml`
+- Windows: `%APPDATA%\jesseduffield\lazytask\config.yml`
 
 If you want to change the config directory:
 
@@ -126,7 +126,7 @@ git:
   fetchAll: true # Pass --all flag when running git fetch. Set to false to fetch only origin (or the current branch's upstream remote if there is one)
   branchLogCmd: 'git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --'
   allBranchesLogCmd: 'git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium'
-  overrideGpg: false # prevents lazygit from spawning a separate process when using GPG
+  overrideGpg: false # prevents lazytask from spawning a separate process when using GPG
   disableForcePushing: false
   parseEmoji: false
   truncateCopiedCommitHashesTo: 12 # When copying commit hashes to the clipboard, truncate them to this length. Set to 40 to disable truncation.
@@ -331,16 +331,16 @@ os:
 
 There are two commands for opening files, `o` for "open" and `e` for "edit". `o` acts as if the file was double-clicked in the Finder/Explorer, so it also works for non-text files, whereas `e` opens the file in an editor. `e` can also jump to the right line in the file if you invoke it from the staging panel, for example.
 
-To tell lazygit which editor to use for the `e` command, the easiest way to do that is to provide an editPreset config, e.g.
+To tell lazytask which editor to use for the `e` command, the easiest way to do that is to provide an editPreset config, e.g.
 
 ```yaml
 os:
   editPreset: 'vscode'
 ```
 
-Supported presets are `vim`, `nvim`, `nvim-remote`, `lvim`, `emacs`, `nano`, `micro`, `vscode`, `sublime`, `bbedit`, `kakoune`, `helix`, and `xcode`. In many cases lazygit will be able to guess the right preset from your $(git config core.editor), or an environment variable such as $VISUAL or $EDITOR.
+Supported presets are `vim`, `nvim`, `nvim-remote`, `lvim`, `emacs`, `nano`, `micro`, `vscode`, `sublime`, `bbedit`, `kakoune`, `helix`, and `xcode`. In many cases lazytask will be able to guess the right preset from your $(git config core.editor), or an environment variable such as $VISUAL or $EDITOR.
 
-`nvim-remote` is an experimental preset for when you have invoked lazygit from within a neovim process, allowing lazygit to open the file from within the parent process rather than spawning a new one.
+`nvim-remote` is an experimental preset for when you have invoked lazytask from within a neovim process, allowing lazytask to open the file from within the parent process rather than spawning a new one.
 
 If for some reason you are not happy with the default commands from a preset, or there simply is no preset for your editor, you can customize the commands by setting the `edit`, `editAtLine`, and `editAtLineAndWait` options, e.g.:
 
@@ -353,22 +353,22 @@ os:
   openDirInEditor: 'myeditor {{dir}}'
 ```
 
-The `editInTerminal` option is used to decide whether lazygit needs to suspend itself to the background before calling the editor. It should really be named `suspend` because for some cases like when lazygit is opened from within a neovim session and you're using the `nvim-remote` preset, you're technically still in a terminal. Nonetheless we're sticking with the name `editInTerminal` for backwards compatibility.
+The `editInTerminal` option is used to decide whether lazytask needs to suspend itself to the background before calling the editor. It should really be named `suspend` because for some cases like when lazytask is opened from within a neovim session and you're using the `nvim-remote` preset, you're technically still in a terminal. Nonetheless we're sticking with the name `editInTerminal` for backwards compatibility.
 
 Contributions of new editor presets are welcome; see the `getPreset` function in [`editor_presets.go`](https://github.com/lobes/lazytask/blob/master/pkg/config/editor_presets.go).
 
 ## Overriding default config file location
 
-To override the default config directory, use `CONFIG_DIR="$HOME/.config/lazygit"`. This directory contains the config file in addition to some other files lazygit uses to keep track of state across sessions.
+To override the default config directory, use `CONFIG_DIR="$HOME/.config/lazytask"`. This directory contains the config file in addition to some other files lazytask uses to keep track of state across sessions.
 
 To override the individual config file used, use the `--use-config-file` arg or the `LG_CONFIG_FILE` env var.
 
 If you want to merge a specific config file into a more general config file, perhaps for the sake of setting some theme-specific options, you can supply a list of comma-separated config file paths, like so:
 
 ```sh
-lazygit --use-config-file="$HOME/.base_lg_conf,$HOME/.light_theme_lg_conf"
+lazytask --use-config-file="$HOME/.base_lg_conf,$HOME/.light_theme_lg_conf"
 or
-LG_CONFIG_FILE="$HOME/.base_lg_conf,$HOME/.light_theme_lg_conf" lazygit
+LG_CONFIG_FILE="$HOME/.base_lg_conf,$HOME/.light_theme_lg_conf" lazytask
 ```
 
 ## Scroll-off Margin
@@ -432,7 +432,7 @@ gui:
 
 ## Custom Author Color
 
-Lazygit will assign a random color for every commit author in the commits pane by default.
+lazytask will assign a random color for every commit author in the commits pane by default.
 
 You can customize the color in case you're not happy with the randomly assigned one:
 
@@ -525,7 +525,7 @@ keybinding:
 
 ## Custom pull request URLs
 
-Some git provider setups (e.g. on-premises GitLab) can have distinct URLs for git-related calls and the web interface/API itself. To work with those, Lazygit needs to know where it needs to create the pull request. You can do so on your `config.yml` file using the following syntax:
+Some git provider setups (e.g. on-premises GitLab) can have distinct URLs for git-related calls and the web interface/API itself. To work with those, lazytask needs to know where it needs to create the pull request. You can do so on your `config.yml` file using the following syntax:
 
 ```yaml
 services:
@@ -570,7 +570,7 @@ Result:
 
 ## Launching not in a repository behaviour
 
-By default, when launching lazygit from a directory that is not a repository, you will be prompted to choose if you would like to initialize a repo. You can override this behaviour in the config with one of the following:
+By default, when launching lazytask from a directory that is not a repository, you will be prompted to choose if you would like to initialize a repo. You can override this behaviour in the config with one of the following:
 
 ```yaml
 # for default prompting behaviour
