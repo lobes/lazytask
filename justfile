@@ -1,7 +1,5 @@
 #!/usr/bin/env just --justfile
-
-set shell := ["pwsh", "-Command"]
-
+set shell := ["C:\\msys64\\mingw64.exe"]
 alias d := default
 alias b := build
 alias i := install

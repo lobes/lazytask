@@ -1,6 +1,9 @@
 # lazytask
 
 A simple terminal UI for tasks
+TODO:
+- [ ] doc justfile as dependency
+- [ ] doc msys64.exe as dependency
 
 ## Table of contents
 
