@@ -8,8 +8,6 @@ import (
 	"github.com/google/uuid"
 )
 
-type Uuid string
-
 type Priority string
 
 const (
@@ -20,24 +18,22 @@ const (
 	All   Priority = "awareness"
 )
 
-type Status string
-
 const (
-	New   Status = "limbo"
-	Later Status = "maybe not today... but some day"
-	Next  Status = "batter up..."
-	Now   Status = "getting after it"
-	Done  Status = "made the thing do the thing"
+	New   string = "limbo"
+	Later string = "maybe not today... but some day"
+	Next  string = "batter up..."
+	Now   string = "getting after it"
+	Done  string = "made the thing do the thing"
 )
 
 type Task struct {
-	Uuid        Uuid
+	Uuid        string
 	Description string
 	Tags        []string
 	Priority    Priority
-	Status      Status
+	Status      string
 	DueOn       time.Time
-	Parents     []Uuid
+	Parents     []string
 }
 
 func (t Task) Error() string {
@@ -56,7 +52,7 @@ func ReadTask() {
 	fmt.Printf("description: %s\n", testicles.Description)
 }
 
-func (t *Task) SetStatus(newStatus Status) error {
+func (t *Task) SetStatus(newStatus string) error {
 	// Here, you could enforce rules. For example:
 	// - Disallow moving away from StatusDone
 	// - Define valid transitions if needed
@@ -68,9 +64,8 @@ func (t *Task) SetStatus(newStatus Status) error {
 }
 
 func (t Task) CreateTask(data Task) error {
-	newUuid := uuid.New()
 	return Task{
-		Uuid:        newUuid,
+		Uuid:        uuid.NewString(),
 		Description: data.Description,
 	}
 }
