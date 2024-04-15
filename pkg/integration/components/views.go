@@ -54,8 +54,8 @@ func (self *Views) Worktrees() *ViewDriver {
 	return self.regularView("worktrees")
 }
 
-func (self *Views) Status() *ViewDriver {
-	return self.regularView("status")
+func (self *Views) Vitals() *ViewDriver {
+	return self.regularView("vitals")
 }
 
 func (self *Views) Submodules() *ViewDriver {

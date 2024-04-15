@@ -3,7 +3,7 @@ package types
 import "github.com/jesseduffield/gocui"
 
 type Views struct {
-	Status         *gocui.View
+	Vitals         *gocui.View
 	Submodules     *gocui.View
 	Files          *gocui.View
 	Branches       *gocui.View

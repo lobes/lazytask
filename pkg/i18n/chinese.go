@@ -58,7 +58,7 @@ func chineseTranslationSet() TranslationSet {
 		SureToAmend:                    "您确定要修补上一次提交吗？之后您可以从提交面板更改提交消息。",
 		NoCommitToAmend:                "没有需要提交的修补。",
 		CommitChangesWithEditor:        "提交更改（使用编辑器编辑提交信息）",
-		StatusTitle:                    "状态",
+		VitalsTitle:                    "状态",
 		Menu:                           "菜单",
 		Execute:                        "执行",
 		Stage:                          "切换暂存状态",

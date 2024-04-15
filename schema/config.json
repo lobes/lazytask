@@ -933,7 +933,7 @@
           "additionalProperties": false,
           "type": "object"
         },
-        "status": {
+        "vitals": {
           "properties": {
             "checkForUpdate": {
               "type": "string",
@@ -1380,7 +1380,7 @@
           "context": {
             "type": "string",
             "enum": [
-              "status",
+              "vitals",
               "files",
               "worktrees",
               "localBranches",

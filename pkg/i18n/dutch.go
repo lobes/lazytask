@@ -24,7 +24,7 @@ func dutchTranslationSet() TranslationSet {
 		SureToAmend:                     "Weet je zeker dat je de laatste commit wilt wijzigen? U kunt het commit-bericht wijzigen vanuit het commits-paneel.",
 		NoCommitToAmend:                 "Er is geen commits om te wijzigen.",
 		CommitChangesWithEditor:         "Commit veranderingen met de git editor",
-		StatusTitle:                     "Status",
+		VitalsTitle:                     "Vitals",
 		Menu:                            "Menu",
 		Execute:                         "Uitvoeren",
 		Stage:                           "Toggle staged",

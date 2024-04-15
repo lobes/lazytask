@@ -40,7 +40,7 @@ func polishTranslationSet() TranslationSet {
 		BaseCommitIsAlreadyOnMainBranch:     "Bazowy commit dla tej zmiany jest już na gałęzi głównej",
 		BaseCommitIsNotInCurrentView:        "Bazowy commit nie jest w bieżącym widoku",
 		HunksWithOnlyAddedLinesWarning:      "Istnieją zakresy tylko z dodanymi liniami w różnicach; uważaj, aby sprawdzić, czy te należą do znalezionego bazowego commita.\n\nKontynuować?",
-		StatusTitle:                         "Status",
+		VitalsTitle:                         "Vitals",
 		Menu:                                "Menu",
 		Execute:                             "Wykonaj",
 		Stage:                               "Zatwierdź",

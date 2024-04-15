@@ -12,7 +12,7 @@ import (
 	"github.com/lobes/lazytask/pkg/i18n"
 )
 
-func FormatStatus(
+func FormatVitals(
 	repoName string,
 	currentBranch *models.Branch,
 	itemOperation types.ItemOperation,

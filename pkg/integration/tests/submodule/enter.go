@@ -26,13 +26,13 @@ var Enter = NewIntegrationTest(NewIntegrationTestArgs{
 	},
 	Run: func(t *TestDriver, keys config.KeybindingConfig) {
 		assertInParentRepo := func() {
-			t.Views().Status().Content(Contains("repo"))
+			t.Views().Vitals().Content(Contains("repo"))
 		}
 		assertInSubmodule := func() {
 			if t.Git().Version().IsAtLeast(2, 22, 0) {
-				t.Views().Status().Content(Contains("my_submodule_path(my_submodule_name)"))
+				t.Views().Vitals().Content(Contains("my_submodule_path(my_submodule_name)"))
 			} else {
-				t.Views().Status().Content(Contains("my_submodule_path"))
+				t.Views().Vitals().Content(Contains("my_submodule_path"))
 			}
 		}
 

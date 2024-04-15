@@ -49,7 +49,7 @@ type TranslationSet struct {
 	BaseCommitIsAlreadyOnMainBranch       string
 	BaseCommitIsNotInCurrentView          string
 	HunksWithOnlyAddedLinesWarning        string
-	StatusTitle                           string
+	VitalsTitle                           string
 	GlobalTitle                           string
 	Menu                                  string
 	Execute                               string
@@ -1010,7 +1010,7 @@ func EnglishTranslationSet() TranslationSet {
 		BaseCommitIsAlreadyOnMainBranch:      "The base commit for this change is already on the main branch",
 		BaseCommitIsNotInCurrentView:         "Base commit is not in current view",
 		HunksWithOnlyAddedLinesWarning:       "There are ranges of only added lines in the diff; be careful to check that these belong in the found base commit.\n\nProceed?",
-		StatusTitle:                          "Status",
+		VitalsTitle:                          " Vitals ",
 		Menu:                                 "Menu",
 		Execute:                              "Execute",
 		Stage:                                "Stage",

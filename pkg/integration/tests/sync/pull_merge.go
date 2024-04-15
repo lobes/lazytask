@@ -33,13 +33,13 @@ var PullMerge = NewIntegrationTest(NewIntegrationTestArgs{
 				Contains("one"),
 			)
 
-		t.Views().Status().Content(Contains("↓2 repo → master"))
+		t.Views().Vitals().Content(Contains("↓2 repo → master"))
 
 		t.Views().Files().
 			IsFocused().
 			Press(keys.Universal.Pull)
 
-		t.Views().Status().Content(Contains("↑2 repo → master"))
+		t.Views().Vitals().Content(Contains("↑2 repo → master"))
 
 		t.Views().Commits().
 			Lines(

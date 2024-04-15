@@ -44,7 +44,7 @@ func koreanTranslationSet() TranslationSet {
 		SureToAmend:                      "마지막 커밋을 수정하시겠습니까? 그런 다음 커밋 패널에서 커밋 메시지를 변경할 수 있습니다.",
 		NoCommitToAmend:                  "Amend 가능한 커밋이 없습니다.",
 		CommitChangesWithEditor:          "Git 편집기를 사용하여 변경 내용을 커밋합니다.",
-		StatusTitle:                      "상태",
+		VitalsTitle:                      "상태",
 		Menu:                             "메뉴",
 		Execute:                          "실행",
 		Stage:                            "Staged 전환",

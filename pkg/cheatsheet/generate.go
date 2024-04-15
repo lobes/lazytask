@@ -94,7 +94,7 @@ func localisedTitle(tr *i18n.TranslationSet, str string) string {
 		"branches":          tr.BranchesTitle,
 		"localBranches":     tr.LocalBranchesTitle,
 		"files":             tr.FilesTitle,
-		"status":            tr.StatusTitle,
+		"vitals":            tr.VitalsTitle,
 		"submodules":        tr.SubmodulesTitle,
 		"subCommits":        tr.SubCommitsTitle,
 		"remoteBranches":    tr.RemoteBranchesTitle,

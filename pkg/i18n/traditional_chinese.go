@@ -95,7 +95,7 @@ func traditionalChineseTranslationSet() TranslationSet {
 		SureToAmend:                      "是否確定要修改上次提交？之後你可以從提交面板中再次更改此次提交的訊息。",
 		NoCommitToAmend:                  "沒有可以修改的提交。",
 		CommitChangesWithEditor:          "使用 git 編輯器提交變更",
-		StatusTitle:                      "狀態",
+		VitalsTitle:                      "狀態",
 		Menu:                             "選單",
 		Execute:                          "執行",
 		Stage:                            "切換預存",

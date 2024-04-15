@@ -63,7 +63,7 @@ func RussianTranslationSet() TranslationSet {
 		SureToAmend:                      "Вы уверены, что хотите править последний коммит? Впоследствии можно изменить сообщение коммита на панели коммитов.",
 		NoCommitToAmend:                  "Не найден коммит для внесения поправок.",
 		CommitChangesWithEditor:          "Сохранить изменения с помощью редактора git",
-		StatusTitle:                      "Статус",
+		VitalsTitle:                      "Статус",
 		Menu:                             "Меню",
 		Execute:                          "Выполнить",
 		Stage:                            "Переключить индекс",

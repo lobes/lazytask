@@ -14,7 +14,7 @@ import (
 	"github.com/lobes/lazytask/pkg/gui/context"
 	"github.com/lobes/lazytask/pkg/gui/filetree"
 	"github.com/lobes/lazytask/pkg/gui/mergeconflicts"
-	"github.com/lobes/lazytask/pkg/gui/presentation"
+	// "github.com/lobes/lazytask/pkg/gui/presentation"
 	"github.com/lobes/lazytask/pkg/gui/types"
 	"github.com/lobes/lazytask/pkg/utils"
 	"github.com/samber/lo"
@@ -90,7 +90,7 @@ func (self *RefreshHelper) Refresh(options types.RefreshOptions) error {
 				types.TAGS,
 				types.REMOTES,
 				types.WORKTREES,
-				types.STATUS,
+				types.VITALS,
 				types.BISECT_INFO,
 				types.STAGING,
 			})
@@ -215,7 +215,7 @@ func getScopeNames(scopes []types.RefreshableView) []string {
 		types.TAGS:            "tags",
 		types.REMOTES:         "remotes",
 		types.WORKTREES:       "worktrees",
-		types.STATUS:          "status",
+		types.VITALS:          "vitals",
 		types.BISECT_INFO:     "bisect",
 		types.STAGING:         "staging",
 		types.MERGE_CONFLICTS: "mergeConflicts",
@@ -701,14 +701,9 @@ func (self *RefreshHelper) refreshStatus() {
 		return
 	}
 
-	workingTreeState := self.c.Git().Status.WorkingTreeState()
-	linkedWorktreeName := self.worktreeHelper.GetLinkedWorktreeName()
+	vitals := "all your base are belong to us!"
 
-	repoName := self.c.Git().RepoPaths.RepoName()
-
-	status := presentation.FormatStatus(repoName, currentBranch, types.ItemOperationNone, linkedWorktreeName, workingTreeState, self.c.Tr, self.c.UserConfig)
-
-	self.c.SetViewContent(self.c.Views().Status, status)
+	self.c.SetViewContent(self.c.Views().Vitals, vitals)
 }
 
 func (self *RefreshHelper) refForLog() string {

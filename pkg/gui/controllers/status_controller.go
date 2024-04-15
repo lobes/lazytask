@@ -47,19 +47,19 @@ func (self *StatusController) GetKeybindings(opts types.KeybindingsOpts) []*type
 			DisplayOnScreen: true,
 		},
 		{
-			Key:             opts.GetKey(opts.Config.Status.CheckForUpdate),
+			Key:             opts.GetKey(opts.Config.Vitals.CheckForUpdate),
 			Handler:         self.handleCheckForUpdate,
 			Description:     self.c.Tr.CheckForUpdate,
 			DisplayOnScreen: true,
 		},
 		{
-			Key:             opts.GetKey(opts.Config.Status.RecentRepos),
+			Key:             opts.GetKey(opts.Config.Vitals.RecentRepos),
 			Handler:         self.c.Helpers().Repos.CreateRecentReposMenu,
 			Description:     self.c.Tr.SwitchRepo,
 			DisplayOnScreen: true,
 		},
 		{
-			Key:         opts.GetKey(opts.Config.Status.AllBranchesLogGraph),
+			Key:         opts.GetKey(opts.Config.Vitals.AllBranchesLogGraph),
 			Handler:     self.showAllBranchLogs,
 			Description: self.c.Tr.AllBranchesLogGraph,
 		},
@@ -108,7 +108,7 @@ func (self *StatusController) GetOnRenderToMain() func() error {
 		return self.c.RenderToMainViews(types.RefreshMainOpts{
 			Pair: self.c.MainViewPairs().Normal,
 			Main: &types.ViewUpdateOpts{
-				Title: self.c.Tr.StatusTitle,
+				Title: self.c.Tr.VitalsTitle,
 				Task:  types.NewRenderStringTask(dashboardString),
 			},
 		})
@@ -120,7 +120,7 @@ func (self *StatusController) GetOnClick() func() error {
 }
 
 func (self *StatusController) Context() types.Context {
-	return self.c.Contexts().Status
+	return self.c.Contexts().Vitals
 }
 
 func (self *StatusController) onClick() error {
@@ -135,7 +135,7 @@ func (self *StatusController) onClick() error {
 		return err
 	}
 
-	cx, _ := self.c.Views().Status.Cursor()
+	cx, _ := self.c.Views().Vitals.Cursor()
 	upstreamStatus := presentation.BranchStatus(currentBranch, types.ItemOperationNone, self.c.Tr, time.Now(), self.c.UserConfig)
 	repoName := self.c.Git().RepoPaths.RepoName()
 	workingTreeState := self.c.Git().Status.WorkingTreeState()

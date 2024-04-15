@@ -24,13 +24,13 @@ var PushFollowTags = NewIntegrationTest(NewIntegrationTestArgs{
 		shell.SetConfig("push.followTags", "true")
 	},
 	Run: func(t *TestDriver, keys config.KeybindingConfig) {
-		t.Views().Status().Content(Contains("↑1 repo → master"))
+		t.Views().Vitals().Content(Contains("↑1 repo → master"))
 
 		t.Views().Files().
 			IsFocused().
 			Press(keys.Universal.Push)
 
-		t.Views().Status().Content(Contains("✓ repo → master"))
+		t.Views().Vitals().Content(Contains("✓ repo → master"))
 
 		t.Views().Remotes().
 			Focus().

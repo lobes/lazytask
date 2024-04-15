@@ -16,12 +16,12 @@ func NewContextTree(c *ContextCommon) *ContextTree {
 				HasUncontrolledBounds: true, // setting to true because the global context doesn't even have a view
 			}),
 		),
-		Status: NewSimpleContext(
+		Vitals: NewSimpleContext(
 			NewBaseContext(NewBaseContextOpts{
 				Kind:       types.SIDE_CONTEXT,
-				View:       c.Views().Status,
-				WindowName: "status",
-				Key:        STATUS_CONTEXT_KEY,
+				View:       c.Views().Vitals,
+				WindowName: "vitals",
+				Key:        VITALS_CONTEXT_KEY,
 				Focusable:  true,
 			}),
 		),

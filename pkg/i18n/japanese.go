@@ -45,7 +45,7 @@ func japaneseTranslationSet() TranslationSet {
 		SureToAmend:             "最新のコミットに変更をamendします。よろしいですか? コミットメッセージはコミットパネルから変更できます。",
 		NoCommitToAmend:         "Amend可能なコミットが存在しません。",
 		CommitChangesWithEditor: "gitエディタを使用して変更をコミット",
-		StatusTitle:             "ステータス",
+		VitalsTitle:             "ステータス",
 		Menu:                    "メニュー",
 		Execute:                 "実行",
 		Stage:                   "ステージ/アンステージ",
