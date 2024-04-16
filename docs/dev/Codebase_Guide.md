@@ -19,7 +19,7 @@
 - `pkg/commands/models`: Contains model structs that represent commits, branches, files, etc.
 - `pkg/commands/patch`: Contains code for parsing and working with git patches
 - `pkg/common`: Contains the `Common` struct which holds common dependencies like the logger, i18n, and the user config. Most structs in the code will have a field named `c` which holds a common struct (or a derivative of the common struct).
-- `pkg/config`: Contains code relating to the Lazygit user config. Specifically `pkg/config/user_config/go` defines the user config struct and its default values.
+- `pkg/config`: Contains code relating to the Lazygit user config. Specifically `pkg/config/user_config.go` defines the user config struct and its default values.
 - `pkg/constants`: Contains some constant strings (e.g. links to docs)
 - `pkg/env`: Contains code relating to setting/getting environment variables
 - `pkg/i18n`: Contains internationalised strings
