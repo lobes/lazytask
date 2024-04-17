@@ -1,0 +1,8 @@
+# todo: generate uuids on task creation
+uuid = 2                        # uuid :: String = <generate-uuid>.go
+description = "iam invincible!"
+priority = "super-high"
+status = "slugheads"
+due_date = 1777-07-17 07:17:17Z
+depends_on = [1]                # probably end up being uuid :: String
+

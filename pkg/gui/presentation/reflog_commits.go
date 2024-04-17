@@ -4,11 +4,11 @@ import (
 	"time"
 
 	"github.com/jesseduffield/generics/set"
+	"github.com/kyokomi/emoji/v2"
 	"github.com/lobes/lazytask/pkg/commands/models"
 	"github.com/lobes/lazytask/pkg/gui/style"
 	"github.com/lobes/lazytask/pkg/theme"
 	"github.com/lobes/lazytask/pkg/utils"
-	"github.com/kyokomi/emoji/v2"
 	"github.com/samber/lo"
 )
 

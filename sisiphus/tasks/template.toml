@@ -1,0 +1,10 @@
+uuid = "some-generated-uuid" 
+description = "iam invincible!"
+priority = "super-high"
+tags = ["boris","fist-pump"]
+status = "slugheads"
+due_on = 1777-07-17 07:17:17Z
+parents = [
+  "parent1-uuid",
+  "parent2-uuid",
+] 

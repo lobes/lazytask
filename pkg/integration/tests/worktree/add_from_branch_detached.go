@@ -40,7 +40,7 @@ var AddFromBranchDetached = NewIntegrationTest(NewIntegrationTestArgs{
 				Contains("mybranch (worktree)"),
 			)
 
-		t.Views().Status().
+		t.Views().Vitals().
 			Content(Contains("repo(linked-worktree)"))
 	},
 })

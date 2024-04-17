@@ -301,7 +301,7 @@ type UpdateConfig struct {
 
 type KeybindingConfig struct {
 	Universal      KeybindingUniversalConfig      `yaml:"universal"`
-	Status         KeybindingStatusConfig         `yaml:"status"`
+	Vitals         KeybindingVitalsConfig         `yaml:"vitals"`
 	Files          KeybindingFilesConfig          `yaml:"files"`
 	Branches       KeybindingBranchesConfig       `yaml:"branches"`
 	Worktrees      KeybindingWorktreesConfig      `yaml:"worktrees"`
@@ -385,7 +385,7 @@ type KeybindingUniversalConfig struct {
 	OpenDiffTool                 string   `yaml:"openDiffTool"`
 }
 
-type KeybindingStatusConfig struct {
+type KeybindingVitalsConfig struct {
 	CheckForUpdate      string `yaml:"checkForUpdate"`
 	RecentRepos         string `yaml:"recentRepos"`
 	AllBranchesLogGraph string `yaml:"allBranchesLogGraph"`
@@ -798,7 +798,7 @@ func GetDefaultConfig() *UserConfig {
 				DecreaseContextInDiffView:    "{",
 				OpenDiffTool:                 "<c-t>",
 			},
-			Status: KeybindingStatusConfig{
+			Vitals: KeybindingVitalsConfig{
 				CheckForUpdate:      "u",
 				RecentRepos:         "<enter>",
 				AllBranchesLogGraph: "a",

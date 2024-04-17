@@ -34,7 +34,7 @@ var PullMergeConflict = NewIntegrationTest(NewIntegrationTestArgs{
 				Contains("one"),
 			)
 
-		t.Views().Status().Content(Contains("↓2 repo → master"))
+		t.Views().Vitals().Content(Contains("↓2 repo → master"))
 
 		t.Views().Files().
 			IsFocused().
@@ -62,7 +62,7 @@ var PullMergeConflict = NewIntegrationTest(NewIntegrationTestArgs{
 
 		t.Common().ContinueOnConflictsResolved()
 
-		t.Views().Status().Content(Contains("↑2 repo → master"))
+		t.Views().Vitals().Content(Contains("↑2 repo → master"))
 
 		t.Views().Commits().
 			Focus().

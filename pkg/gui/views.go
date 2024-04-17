@@ -23,7 +23,7 @@ func (gui *Gui) orderedViewNameMappings() []viewNameMapping {
 	return []viewNameMapping{
 		// first layer. Ordering within this layer does not matter because there are
 		// no overlapping views
-		{viewPtr: &gui.Views.Status, name: "status"},
+		{viewPtr: &gui.Views.Vitals, name: "vitals"},
 		{viewPtr: &gui.Views.Snake, name: "snake"},
 		{viewPtr: &gui.Views.Submodules, name: "submodules"},
 		{viewPtr: &gui.Views.Worktrees, name: "worktrees"},
@@ -126,7 +126,15 @@ func (gui *Gui) createAllViews() error {
 
 	gui.Views.Files.Title = gui.c.Tr.FilesTitle
 
-	for _, view := range []*gocui.View{gui.Views.Main, gui.Views.Secondary, gui.Views.Staging, gui.Views.StagingSecondary, gui.Views.PatchBuilding, gui.Views.PatchBuildingSecondary, gui.Views.MergeConflicts} {
+	for _, view := range []*gocui.View{
+		gui.Views.Main,
+		gui.Views.Secondary,
+		gui.Views.Staging,
+		gui.Views.StagingSecondary,
+		gui.Views.PatchBuilding,
+		gui.Views.PatchBuildingSecondary,
+		gui.Views.MergeConflicts,
+	} {
 		view.Title = gui.c.Tr.DiffTitle
 		view.Wrap = true
 		view.IgnoreCarriageReturns = true
@@ -151,7 +159,7 @@ func (gui *Gui) createAllViews() error {
 	gui.Views.Limit.Title = gui.c.Tr.NotEnoughSpace
 	gui.Views.Limit.Wrap = true
 
-	gui.Views.Status.Title = gui.c.Tr.StatusTitle
+	gui.Views.Vitals.Title = gui.c.Tr.VitalsTitle
 
 	gui.Views.AppStatus.BgColor = gocui.ColorDefault
 	gui.Views.AppStatus.FgColor = gocui.ColorCyan
@@ -197,7 +205,7 @@ func (gui *Gui) createAllViews() error {
 			return fmt.Sprintf("[%s]", binding)
 		})
 
-		gui.Views.Status.TitlePrefix = jumpLabels[0]
+		gui.Views.Vitals.TitlePrefix = jumpLabels[0]
 
 		gui.Views.Files.TitlePrefix = jumpLabels[1]
 		gui.Views.Worktrees.TitlePrefix = jumpLabels[1]

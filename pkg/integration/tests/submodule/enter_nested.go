@@ -38,15 +38,15 @@ var EnterNested = NewIntegrationTest(NewIntegrationTestArgs{
 			PressEnter()
 
 		if t.Git().Version().IsAtLeast(2, 22, 0) {
-			t.Views().Status().Content(Contains("innerSubPath(innerSubName)"))
+			t.Views().Vitals().Content(Contains("innerSubPath(innerSubName)"))
 		} else {
-			t.Views().Status().Content(Contains("innerSubPath"))
+			t.Views().Vitals().Content(Contains("innerSubPath"))
 		}
 		t.Views().Commits().ContainsLines(
 			Contains("initial inner commit"),
 		)
 
 		t.Views().Files().PressEscape()
-		t.Views().Status().Content(Contains("repo"))
+		t.Views().Vitals().Content(Contains("repo"))
 	},
 })

@@ -3,6 +3,7 @@ module github.com/lobes/lazytask
 go 1.21
 
 require (
+	github.com/BurntSushi/toml v1.3.2
 	github.com/adrg/xdg v0.4.0
 	github.com/atotto/clipboard v0.1.4
 	github.com/aybabtme/humanlog v0.4.1
@@ -39,6 +40,7 @@ require (
 	golang.org/x/exp v0.0.0-20220318154914-8dddf5d87bd8
 	gopkg.in/ozeidan/fuzzy-patricia.v3 v3.0.0
 	gopkg.in/yaml.v3 v3.0.1
+	github.com/google/uuid v1.6.0
 )
 
 require (

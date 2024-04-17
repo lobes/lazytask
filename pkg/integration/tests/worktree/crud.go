@@ -21,7 +21,7 @@ var Crud = NewIntegrationTest(NewIntegrationTestArgs{
 				Contains("mybranch"),
 			)
 
-		t.Views().Status().
+		t.Views().Vitals().
 			Lines(
 				Contains("repo → mybranch"),
 			)
@@ -61,7 +61,7 @@ var Crud = NewIntegrationTest(NewIntegrationTestArgs{
 			IsFocused()
 
 		// status panel includes the worktree if it's a linked worktree
-		t.Views().Status().
+		t.Views().Vitals().
 			Lines(
 				Contains("repo(linked-worktree) → newbranch"),
 			)

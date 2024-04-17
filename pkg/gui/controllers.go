@@ -220,7 +220,7 @@ func (gui *Gui) resetHelpersAndControllers() {
 
 	// allow for navigating between side window contexts
 	for _, context := range []types.Context{
-		gui.State.Contexts.Status,
+		gui.State.Contexts.Vitals,
 		gui.State.Contexts.Remotes,
 		gui.State.Contexts.Worktrees,
 		gui.State.Contexts.Tags,
@@ -355,7 +355,7 @@ func (gui *Gui) resetHelpersAndControllers() {
 		remoteBranchesController,
 	)
 
-	controllers.AttachControllers(gui.State.Contexts.Status,
+	controllers.AttachControllers(gui.State.Contexts.Vitals,
 		statusController,
 	)
 

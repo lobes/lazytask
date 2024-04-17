@@ -15,7 +15,7 @@ var TypeAuthor = NewIntegrationTest(NewIntegrationTestArgs{
 		commonSetup(shell)
 	},
 	Run: func(t *TestDriver, keys config.KeybindingConfig) {
-		t.Views().Status().
+		t.Views().Vitals().
 			Focus().
 			Press(keys.Universal.FilteringMenu)
 
@@ -40,7 +40,7 @@ var TypeAuthor = NewIntegrationTest(NewIntegrationTestArgs{
 
 		t.Views().Information().Content(Contains("Filtering by 'Yang Wen-li <yang.wen-li@email.com>'"))
 
-		t.Views().Status().
+		t.Views().Vitals().
 			Focus().
 			Press(keys.Universal.FilteringMenu)
 
