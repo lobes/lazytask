@@ -25,12 +25,7 @@ func RenderFileTree(
 	submoduleConfigs []*models.SubmoduleConfig,
 	showFileIcons bool,
 ) []string {
-	collapsedPaths := tree.CollapsedPaths()
-	return renderAux(tree.GetRoot().Raw(), collapsedPaths, -1, -1, func(node *filetree.Node[models.File], treeDepth int, visualDepth int, isCollapsed bool) string {
-		fileNode := filetree.NewFileNode(node)
-
-		return getFileLine(isCollapsed, fileNode.GetHasUnstagedChanges(), fileNode.GetHasStagedChanges(), treeDepth, visualDepth, showFileIcons, submoduleConfigs, node)
-	})
+	return []string{TASK_OPEN + " somebody", TASK_CLOSED + " stop me!"}
 }
 
 func RenderCommitFileTree(

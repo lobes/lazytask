@@ -62,15 +62,14 @@ type IBaseContext interface {
 	// of the same transient context can appear at once meaning one might be 'stolen'
 	// from another window.
 	IsTransient() bool
-	// this tells us if the view's bounds are determined by its window or if they're
-	// determined independently.
+	// this tells us if the view's bounds are determined by its window or if they're determined independently.
 	HasControlledBounds() bool
 
 	// true if the view needs to be rerendered when its width changes
 	NeedsRerenderOnWidthChange() bool
 
-	// returns the desired title for the view upon activation. If there is no desired title (returns empty string), then
-	// no title will be set
+	// returns the desired title for the view upon activation.
+	// If there is no desired title (returns empty string), then no title will be set
 	Title() string
 
 	GetOptionsMap() map[string]string
