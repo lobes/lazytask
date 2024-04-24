@@ -15,7 +15,9 @@ import (
 
 const (
 	EXPANDED_ARROW  = "▼"
-	COLLAPSED_ARROW = "▶"
+	COLLAPSED_ARROW = "►"
+	TASK_OPEN       = "☐"
+	TASK_CLOSED     = "☒"
 )
 
 func RenderFileTree(
