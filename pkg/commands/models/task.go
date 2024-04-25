@@ -44,12 +44,16 @@ func (t Task) Error() string {
 
 }
 
-func ReadTask() {
+func ReadTask() []string {
 	var fromDisk Task
+	var readTasks []string
 	if _, err := toml.DecodeFile("sisiphus/tasks/template.toml", &fromDisk); err != nil {
 		fmt.Printf("Error decoding task from toml: %s\n", err)
 	}
-	fmt.Printf("description: %s\n", fromDisk.Description)
+
+	readTasks = append(readTasks, fromDisk.Description)
+
+	return readTasks
 }
 
 func (t *Task) SetState(newState string) error {

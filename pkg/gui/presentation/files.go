@@ -25,7 +25,9 @@ func RenderFileTree(
 	submoduleConfigs []*models.SubmoduleConfig,
 	showFileIcons bool,
 ) []string {
-	return []string{TASK_OPEN + " somebody", TASK_CLOSED + " stop me!"}
+	// read all task toml
+	// make a []string of the descriptions
+	return models.ReadTask()
 }
 
 func RenderCommitFileTree(
