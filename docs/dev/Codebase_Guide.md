@@ -9,9 +9,9 @@
   - catches and handles some errors that the gui raises
 - `pkg/app/daemon`: not a daemon -? it's a short-lived background process passed to [some-other-process] for certain tasks
 - `pkg/cheatsheet`: generates keybinding cheatsheets in `docs/keybindings`.
-- - `pkg/commands/git_commands`: All communication to the git binary happens here. So for example there's a `Checkout` method which calls `git checkout`.
-- - `pkg/commands/git_commands`: All communication to the git binary happens here. So for example there's a `Checkout` method which calls `git checkout`.
-- - `pkg/commands/git_commands`: All communication to the git binary happens here. So for example there's a `Checkout` method which calls `git checkout`.
+- `pkg/commands/git_commands`: All communication to the git binary happens here. So for example there's a `Checkout` method which calls `git checkout`.
+- `pkg/commands/git_commands`: All communication to the git binary happens here. So for example there's a `Checkout` method which calls `git checkout`.
+- `pkg/commands/git_commands`: All communication to the git binary happens here. So for example there's a `Checkout` method which calls `git checkout`.
 - [archive] <- `pkg/commands/git_commands`: All communication to the git binary happens here. So for example there's a `Checkout` method which calls `git checkout`.
 - `pkg/commands/oscommands`: Contains code for talking to the OS, and for invoking commands in general
 - `pkg/commands/git_config`: Reading of the git config all happens here.

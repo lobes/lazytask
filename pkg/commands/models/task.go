@@ -41,7 +41,6 @@ func (t Task) Error() string {
     "Task Error: [%s] %s 
     Priority: %s
     State: %s`, t.Uuid, t.Description, t.Priority, t.State)
-
 }
 
 func ReadTask() []string {

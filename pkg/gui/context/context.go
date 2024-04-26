@@ -83,6 +83,7 @@ var AllContextKeys = []types.ContextKey{
 type ContextTree struct {
 	Global                      types.Context
 	Vitals                      types.Context
+	Tasks                       types.Context
 	Snake                       types.Context
 	Files                       *WorkingTreeContext
 	Menu                        *MenuContext
@@ -126,6 +127,7 @@ func (self *ContextTree) Flatten() []types.Context {
 	return []types.Context{
 		self.Global,
 		self.Vitals,
+		self.Tasks,
 		self.Snake,
 		self.Submodules,
 		self.Worktrees,
